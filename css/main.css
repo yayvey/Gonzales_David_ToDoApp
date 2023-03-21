@@ -71,18 +71,18 @@ input[class=cbprog]:checked+label
     color: orange;
     text-transform: uppercase;
 }
-
+/*when class=cbdone is checked, change info of label (Item info) to all uppercase and green*/
 input[class=cbdone]:checked+label
 {
     color: green;
     text-transform: uppercase;
 }
-
+/*after class=cbprog is checked, add "thumbs up emoji" as content as a congratulations*/
 input[class=cbprog]:checked+label::after
 {
     content: '👍';
 }
-/*when class=cbdone is checked, change info of label (Item info) to all uppercase and green*/
+/*after class=cbdone is checked, add "thumbs up emoji" as content as a congratulations*/
 input[class=cbdone]:checked+label::after
 {
     content: '👍';
