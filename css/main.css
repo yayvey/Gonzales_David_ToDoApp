@@ -1,0 +1,108 @@
+/* Reset all of the defaults to 0 so 
+that you can write your own CSS */
+/* DONT RELY ON BROWSER DEFAULTS */
+
+* {
+    border:none;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+header > h1 {
+    background-color:#ffffff;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding:8px;
+}
+
+/*inserting dog wasting time image in bottom of screen to not disturb other content*/
+body {
+    background-color:rgb(255, 255, 255);
+    background-image: url('../images/time-wasting-dog.png');
+    color:rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 500px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+main { text-align: center }
+
+article {
+    border-radius: 4px;
+    border-style:dashed;
+    border-color: rgb(0, 0, 0);
+
+    border: 4px solid rgb(29, 29, 29);
+
+    display:inline-block;
+
+    margin-left: 12px;
+    margin-right:12px;
+    margin-top:12px;
+    margin-bottom:12px;
+
+
+    text-align:left;
+    width: 25%;
+}
+
+article > h2 {
+    color: rgb(0, 0, 0);
+    padding: 4px 8px;
+}
+
+ul {
+    list-style-type:none;
+}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: none;
+}
+
+/*when class=cbprog is checked, change info of label (Item info) to all uppercase and orange*/
+input[class=cbprog]:checked+label
+{
+    color: orange;
+    text-transform: uppercase;
+}
+/*when class=cbdone is checked, change info of label (Item info) to all uppercase and green*/
+input[class=cbdone]:checked+label
+{
+    color: green;
+    text-transform: uppercase;
+}
+/*after class=cbprog is checked, add "thumbs up emoji" as content as a congratulations*/
+input[class=cbprog]:checked+label::after
+{
+    content: '👍';
+}
+/*after class=cbdone is checked, add "thumbs up emoji" as content as a congratulations*/
+input[class=cbdone]:checked+label::after
+{
+    content: '👍';
+}
+
+/* RESPONSIVE CODE */
+article {
+    width: 100%;
+    margin:10px 0px;
+}
+
+main {
+    margin: 0 12px;
+}
+
+@media(min-width:960px) {
+    article {
+        width:25%;
+        margin:10px 12px;
+    }
+
+    main {margin: 0;}
+}
